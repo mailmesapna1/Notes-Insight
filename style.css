@@ -37,12 +37,12 @@ h1{
     height: 30px;
     width: 50px;
 }
-#descDiv{
+#discDiv{
     color: rgb(85, 53, 12);
     margin: 0.5rem;
     padding: 0.5em;
 }
-#descDiv input{
+#discDiv input{
     padding: 0.5em;
     margin: 1em;
     box-sizing: border-box;

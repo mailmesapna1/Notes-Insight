@@ -4,14 +4,14 @@ shownotes();
 
 //target elements
 var title = document.getElementById('title').value;
-var desc = document.getElementById('desc').value;
+var disc = document.getElementById('disc').value;
 var btn = document.getElementById('btn');
 var secDiv = document.getElementById('secDiv');
 var clearBtn = document.getElementById('clearBtn');
 
 //creating arrays
 var titleArr = [];
-var descArr = [];
+var discArr = [];
 
 //add event listner
 btn.addEventListener('click', (e) => {
@@ -23,22 +23,22 @@ btn.addEventListener('click', (e) => {
     titleArr.push(title);
     // console.log(titleArr);
     // console.log(title);
-    var desc = document.getElementById('desc').value;
-    descArr.push(desc);
-    // console.log(descArr);
+    var disc = document.getElementById('disc').value;
+    discArr.push(disc);
+    // console.log(discArr);
     //check if empty
-    if (title == '' || desc == '') {
+    if (title == '' || disc == '') {
         alert("please fill all fields");
     }
     else {
         //save to local storage
         localStorage.setItem("title", JSON.stringify(titleArr));
-        localStorage.setItem("desc", JSON.stringify(descArr));
+        localStorage.setItem("disc", JSON.stringify(discArr));
         //show alert
         alert("note saved successfully");
         //clear fields
         document.getElementById('title').value = "";
-        document.getElementById('desc').value = "";
+        document.getElementById('disc').value = "";
     }
     shownotes();
 }
@@ -53,9 +53,9 @@ clearBtn.addEventListener('click', (e) => {
     localStorage.clear();
     //show alert
     alert("all notes cleared");
-    //clear fields
+    //clear 
     document.getElementById('title').value = "";
-    document.getElementById('desc').value = "";
+    document.getElementById('disc').value = "";
     //show notes
     shownotes();
 }
@@ -67,26 +67,26 @@ function deleteNote(id) {
     var index = id;
     localtitleArr.splice(index, 1);
     localStorage.setItem("title", JSON.stringify(localtitleArr));
-    var localdescArr = JSON.parse(localStorage.getItem("desc"));
-    localdescArr.splice(index, 1);
-    localStorage.setItem("desc", JSON.stringify(localdescArr));
+    var localdiscArr = JSON.parse(localStorage.getItem("disc"));
+    localdiscArr.splice(index, 1);
+    localStorage.setItem("disc", JSON.stringify(localdiscArr));
     shownotes();
     if (localtitleArr.length == 0) {
         console.log("notes are empty");
         localStorage.removeItem("title");
-        localStorage.removeItem("desc");
+        localStorage.removeItem("disc");
         titleArr = [];
         secDiv.innerHTML = `<h4>you have cleared all notes . Please add first !</h4>`;
     }
 }
-//end of delete note function
-//Show notes function
+//end delete note function
+//Show notes 
 function shownotes() {
     var localTitleArr = JSON.parse(localStorage.getItem("title"));
-    // console.log(localTitleArr);
-    var localDescArr = JSON.parse(localStorage.getItem("desc"));
+
+    var localDiscArr = JSON.parse(localStorage.getItem("disc"));
     var noteEle = '';
-    if (localTitleArr == null || localDescArr == null) {
+    if (localTitleArr == null || localDiscArr == null) {
         noteEle = '<h3>No notes found</h3>';
     }
     else {
@@ -96,16 +96,16 @@ function shownotes() {
         <h3>Your title</h3>
         <p>${localTitleArr[i]}<p>
         </div>
-        <div class="descDiv">
+        <div class="discDiv">
         <h3>Your Description</h3>
-        <p>${localDescArr[i]}</p>
+        <p>${localDiscArr[i]}</p>
         </div>
         <div>
         <button id="${i}" onclick="deleteNote(this.id)">Delete</button>
         </div>
         </div>`
-        } //end of for loop
+        } //end for loop
     }
     var secDiv = document.getElementById('secDiv');
     secDiv.innerHTML = noteEle;
-} //end of shownotes function
+} //end shownotes function
