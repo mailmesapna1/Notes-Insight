@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+    padding-top: 3rem;
+    margin: 25px;
+    font-family: 'Poppins',sans-serif;
+    background-color: antiquewhite;
+}
+h1{
+    /* background-color: cadetblue; */
+    padding: auto;
+    color: rgb(74, 16, 80);
+}
+.mainDiv{
+    
+    color: darksalmon;
+}
+#btn{
+    text-decoration: none;
+    background-color: white;
+    color: rgb(18, 19, 14);
+    border-radius: 0.5em;
+    margin-right: 8rem;
+    height: 30px;
+    width: 50px;
+}
+#clearBtn{
+    text-decoration: none;
+    background-color: white;
+    color: rgb(85, 53, 12);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin-right: 8rem;
+    height: 30px;
+    width: 50px;
+}
+#descDiv{
+    color: rgb(85, 53, 12);
+    margin: 0.5rem;
+    padding: 0.5em;
+}
+#descDiv input{
+    padding: 0.5em;
+    margin: 1em;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    border-color: black;
+}
+#titleDiv{
+    color: rgb(85, 53, 12);
+    margin: 0.5rem;
+    padding: 0.5em;
+}
+#titleDiv input{
+    padding: 0.5em;
+    margin: 1em;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    border-color: black;
+}
+#secDiv{
+    color: rgb(85, 53, 12);
+    margin-top: 1rem;
+    margin-right: 2.5rem;
+    
+}
