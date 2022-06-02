@@ -78,12 +78,9 @@ h1 {
 
 }
 
-.logout {
-    border: 2px;
-}
 
 a {
-    border: 2px;
+    
     text-decoration: none;
     border-color: black;
 }
