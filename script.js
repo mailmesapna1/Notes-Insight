@@ -1,8 +1,11 @@
-//for checking code is running
+//checking code is running
+
 console.log("js is running");
+
 shownotes();
 
 //target elements
+
 var title = document.getElementById('title').value;
 var disc = document.getElementById('disc').value;
 var btn = document.getElementById('btn');
@@ -10,12 +13,15 @@ var secDiv = document.getElementById('secDiv');
 var clearBtn = document.getElementById('clearBtn');
 
 //creating arrays
+
 var titleArr = [];
 var discArr = [];
 
 //add event listner
+
 btn.addEventListener('click', (e) => {
     // console.log(e.target);
+
     e.preventDefault();
     console.log("submit is running");
     //get values
@@ -57,6 +63,7 @@ clearBtn.addEventListener('click', (e) => {
     document.getElementById('title').value = "";
     document.getElementById('disc').value = "";
     //show notes
+
     shownotes();
 }
 );
@@ -67,6 +74,7 @@ function deleteNote(id) {
     var index = id;
     localtitleArr.splice(index, 1);
     localStorage.setItem("title", JSON.stringify(localtitleArr));
+
     var localdiscArr = JSON.parse(localStorage.getItem("disc"));
     localdiscArr.splice(index, 1);
     localStorage.setItem("disc", JSON.stringify(localdiscArr));
@@ -76,6 +84,7 @@ function deleteNote(id) {
         localStorage.removeItem("title");
         localStorage.removeItem("disc");
         titleArr = [];
+
         secDiv.innerHTML = `<h4>you have cleared all notes . Please add first !</h4>`;
     }
 }

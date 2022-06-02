@@ -1,24 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     text-align: center;
     padding-top: 3rem;
     margin: 25px;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: antiquewhite;
 }
-h1{
+
+h1 {
     /* background-color: cadetblue; */
     padding: auto;
     color: rgb(74, 16, 80);
 }
-.mainDiv{
-    
+
+.mainDiv {
+
     color: darksalmon;
 }
-#btn{
+
+#btn {
     text-decoration: none;
     background-color: white;
     color: rgb(18, 19, 14);
@@ -27,7 +31,8 @@ h1{
     height: 30px;
     width: 50px;
 }
-#clearBtn{
+
+#clearBtn {
     text-decoration: none;
     background-color: white;
     color: rgb(85, 53, 12);
@@ -37,33 +42,48 @@ h1{
     height: 30px;
     width: 50px;
 }
-#discDiv{
+
+#discDiv {
     color: rgb(85, 53, 12);
     margin: 0.5rem;
     padding: 0.5em;
 }
-#discDiv input{
+
+#discDiv input {
     padding: 0.5em;
     margin: 1em;
     box-sizing: border-box;
     border-radius: 0.5em;
     border-color: black;
 }
-#titleDiv{
+
+#titleDiv {
     color: rgb(85, 53, 12);
     margin: 0.5rem;
     padding: 0.5em;
 }
-#titleDiv input{
+
+#titleDiv input {
     padding: 0.5em;
     margin: 1em;
     box-sizing: border-box;
     border-radius: 0.5em;
     border-color: black;
 }
-#secDiv{
+
+#secDiv {
     color: rgb(85, 53, 12);
     margin-top: 1rem;
     margin-right: 2.5rem;
-    
+
+}
+
+.logout {
+    border: 2px;
+}
+
+a {
+    border: 2px;
+    text-decoration: none;
+    border-color: black;
 }
