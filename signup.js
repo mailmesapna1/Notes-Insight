@@ -27,5 +27,5 @@ submit.addEventListener('click',(e) => {
     localStorage.setItem('signuparr',JSON.stringify(signuparr));
 
     //redirect to index.html
-    window.location.href='index.html'
+    window.location.href='login.html'
 }) 
