@@ -3,11 +3,7 @@
  const signup = document.getElementById('signup');
  const login = document.getElementById('login');
 
- //add event listner into home
- home.addEventListener('click',(e) => {
-     e.preventDefault();
-     window.location.href ='home.html';
- })
+ 
 
  //add event listner into signup
 

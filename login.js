@@ -1,42 +1,38 @@
 //target Element
-const username =document.getElementById('username');
-const password=document.getElementById('pass');
-const submit=document.getElementById('submit');
+const username = document.getElementById('username');
+const password = document.getElementById('pass');
+const submit = document.getElementById('submit');
 
 const signuparr = JSON.parse(localStorage.getItem('signuparr'));
 
-const loginarr= [];
+const loginarr = [];
 
-submit.addEventListener('click',(e) => {
+submit.addEventListener('click', (e) => {
     e.preventDefault();
     //create user
-    const user= {
-    name: username.value,
-    password: pass.value
+    const user = {
+        name: username.value,
+        password: pass.value
     }
     //check for valid user
-    var valid=false;
-    for(var i=0;i<signuparr.length;i++)
-    {
-        if(user.name == signuparr[i].name && user.password == signuparr[i].password)
-        {
-            valid=true;
+    var valid = false;
+    for (var i = 0; i < signuparr.length; i++) {
+        if (user.name == signuparr[i].name && user.password == signuparr[i].password) {
+            valid = true;
         }
-        
+
     }
-    if(valid)
-    {
+    if (valid) {
         //push in array
         loginarr.push(user)
-    
-    
-    //store array in local storage
-    localStorage.setItem("loginarr",JSON.stringify(loginarr));
-    //redirect to home.html
-    window.location.href="home.html";
+
+
+        //store array in local storage
+        localStorage.setItem("loginarr", JSON.stringify(loginarr));
+        //redirect to home.html
+        window.location.href = "home.html";
     }
-    else
-    {
+    else {
         console.log('user is not valid');
     }
 })
