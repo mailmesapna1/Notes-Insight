@@ -12,7 +12,7 @@ submit.addEventListener('click', (e) => {
     //create user
     const user = {
         name: username.value,
-        password: pass.value
+        password: password.value
     }
     //check for valid user
     var valid = false;

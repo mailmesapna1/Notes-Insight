@@ -18,7 +18,7 @@ submit.addEventListener('click',(e) => {
     //user creat
     const user = {
         name: username.value, 
-        password:pass.value 
+        password:password.value
 
     }
     signuparr.push(user);
