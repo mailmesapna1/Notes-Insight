@@ -32,23 +32,26 @@
 </head>
 
 <body>
-    <form action="mainpage.html">
+    <form action="index.html">
         <div class="email">
-            <label for="email"> Email Address:</label>
-            <input type="email" name="" id="email" required>
+            <label for="username"> Username:</label>
+            <input type="text" name="" id="username" required>
         </div><br>
         <div class="password">
-            <label for="pass">Enter your password</label>
+            <label for="pass">Password</label>
             <input type="password" name="" id="pass" required>
         </div>
         <br>
-
+        <div class="checkbox">
+            Remember Password&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox">
+        </div>
         <div>
-            <button type="submit">Submit</button>
+            <button type="submit" id="submit">Submit</button>
 
         </div>
+        
     </form>
-
+    <script src="login.js"></script>
 </body>
 
 </html>
